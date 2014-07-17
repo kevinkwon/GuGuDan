@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F7427C21977536A0064E079 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4F7427C01977536A0064E079 /* LICENSE */; };
+		4F7427C31977536A0064E079 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F7427C11977536A0064E079 /* README.md */; };
 		4FE0783A1976CF0C001659B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE078391976CF0C001659B7 /* Foundation.framework */; };
 		4FE0783C1976CF0C001659B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE0783B1976CF0C001659B7 /* CoreGraphics.framework */; };
 		4FE0783E1976CF0C001659B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE0783D1976CF0C001659B7 /* UIKit.framework */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F7427C01977536A0064E079 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4F7427C11977536A0064E079 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4FE078361976CF0C001659B7 /* GuGuDan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuGuDan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE078391976CF0C001659B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4FE0783B1976CF0C001659B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +89,8 @@
 		4FE0782D1976CF0C001659B7 = {
 			isa = PBXGroup;
 			children = (
+				4F7427C01977536A0064E079 /* LICENSE */,
+				4F7427C11977536A0064E079 /* README.md */,
 				4FE0783F1976CF0C001659B7 /* GuGuDan */,
 				4FE078611976CF0C001659B7 /* GuGuDanTests */,
 				4FE078381976CF0C001659B7 /* Frameworks */,
@@ -235,6 +241,8 @@
 			files = (
 				4FE078551976CF0C001659B7 /* Images.xcassets in Resources */,
 				4FE078441976CF0C001659B7 /* InfoPlist.strings in Resources */,
+				4F7427C31977536A0064E079 /* README.md in Resources */,
+				4F7427C21977536A0064E079 /* LICENSE in Resources */,
 				4FE0784D1976CF0C001659B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +470,7 @@
 				4FE0786D1976CF0C001659B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FE0786E1976CF0C001659B7 /* Build configuration list for PBXNativeTarget "GuGuDanTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +479,7 @@
 				4FE078701976CF0C001659B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
