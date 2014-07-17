@@ -7,7 +7,6 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
 
 @interface MasterViewController () {
@@ -27,6 +26,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    self.navigationItem.title = @"Clien 구구단";
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewGuGudan:)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -44,10 +45,15 @@
         _gugudanList = [[NSMutableArray alloc] init];
     }
     
-    NSInteger lastDan = _gugudanList.count + 1;
-    [_gugudanList insertObject:@(lastDan) atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    static NSInteger lastDan = 2;
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_gugudanList.count inSection:0];
+    [_gugudanList addObject:@(lastDan)];
+    
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    
+    lastDan++;
 }
 
 #pragma mark - Table View
@@ -66,8 +72,9 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _gugudanList[indexPath.row];
-    cell.textLabel.text = [object description];
+    NSInteger dan = [_gugudanList[indexPath.row] integerValue];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d 단", dan];
+
     return cell;
 }
 
@@ -107,8 +114,8 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _gugudanList[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        NSNumber *selectedDan = _gugudanList[indexPath.row];
+        [[segue destinationViewController] setDan:[selectedDan integerValue]];
     }
 }
 
